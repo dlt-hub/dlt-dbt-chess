@@ -1,0 +1,601 @@
+
+
+============================== 11:42:48.157532 | 49a10ec7-2a5f-4ac0-ae5b-e53c269ed3ec ==============================
+[0m11:42:48.157532 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:42:48.160044 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/dlt-chess-schema-mapping/dbt_chess_data_tst/logs', 'fail_fast': 'False', 'profiles_dir': '/home/codespace/.python/current/lib/python3.12/site-packages/dlt/helpers/dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m11:42:48.160624 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m11:42:48.316123 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:42:48.317215 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:42:48.318586 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.22670107, "process_user_time": 2.280329, "process_kernel_time": 0.20694, "process_mem_max_rss": "208092", "process_in_blocks": "7160", "process_out_blocks": "8"}
+[0m11:42:48.319375 [debug] [MainThread]: Command `cli deps` succeeded at 11:42:48.319237 after 0.23 seconds
+[0m11:42:48.319928 [debug] [MainThread]: Flushing usage events
+
+
+============================== 11:42:50.780577 | 7f3f9410-10b0-4486-969c-d6bf767a8809 ==============================
+[0m11:42:50.780577 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:42:50.782792 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/codespace/.python/current/lib/python3.12/site-packages/dlt/helpers/dbt', 'log_path': '/workspaces/dlt-chess-schema-mapping/dbt_chess_data_tst/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m11:42:50.783350 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m11:42:51.386550 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m11:42:51.399694 [debug] [MainThread]: checksum: a5465e2c5ca9ab14d85df5e06a23f5b8cfda31379f9a0d07ef6c4ab05bc6ee83, vars: {'destination_dataset_name': 'chess_data_tst_transformed',
+ 'source_dataset_name': 'chess_data_tst'}, profile: bigquery, target: , version: 1.8.7
+[0m11:42:51.401074 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:42:52.646681 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m11:42:52.656191 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name '_dlt_loads' in the 'models' section of file 'models/sources.yml'
+[0m11:42:52.673973 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'players_profiles' in the 'models' section of file 'models/sources.yml'
+[0m11:42:52.683988 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'players_games' in the 'models' section of file 'models/sources.yml'
+[0m11:42:52.687192 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'players_profiles__streaming_platforms' in the 'models' section of file 'models/sources.yml'
+[0m11:42:53.047670 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null__dlt_loads_load_id.aced3f4300' (models/sources.yml) depends on a node named '_dlt_loads' in package '' which was not found
+[0m11:42:53.048697 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null__dlt_loads_status.231190b63d' (models/sources.yml) depends on a node named '_dlt_loads' in package '' which was not found
+[0m11:42:53.049563 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null__dlt_loads_inserted_at.94eab1945d' (models/sources.yml) depends on a node named '_dlt_loads' in package '' which was not found
+[0m11:42:53.050429 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles_last_online.6c2074678f' (models/sources.yml) depends on a node named 'players_profiles' in package '' which was not found
+[0m11:42:53.051282 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles_joined.e51ed22fec' (models/sources.yml) depends on a node named 'players_profiles' in package '' which was not found
+[0m11:42:53.052066 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles__dlt_load_id.7b57186368' (models/sources.yml) depends on a node named 'players_profiles' in package '' which was not found
+[0m11:42:53.052861 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles__dlt_id.e67ea5e443' (models/sources.yml) depends on a node named 'players_profiles' in package '' which was not found
+[0m11:42:53.053731 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.unique_players_profiles__dlt_id.7c3634cffc' (models/sources.yml) depends on a node named 'players_profiles' in package '' which was not found
+[0m11:42:53.054507 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_games_end_time.bb1f53032b' (models/sources.yml) depends on a node named 'players_games' in package '' which was not found
+[0m11:42:53.055012 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_games__dlt_load_id.6fd93c3f91' (models/sources.yml) depends on a node named 'players_games' in package '' which was not found
+[0m11:42:53.055504 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_games__dlt_id.80300893e4' (models/sources.yml) depends on a node named 'players_games' in package '' which was not found
+[0m11:42:53.056006 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.unique_players_games__dlt_id.0f902af493' (models/sources.yml) depends on a node named 'players_games' in package '' which was not found
+[0m11:42:53.056499 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles__streaming_platforms__dlt_parent_id.b8b5fc968c' (models/sources.yml) depends on a node named 'players_profiles__streaming_platforms' in package '' which was not found
+[0m11:42:53.056986 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles__streaming_platforms__dlt_list_idx.ee8e55449e' (models/sources.yml) depends on a node named 'players_profiles__streaming_platforms' in package '' which was not found
+[0m11:42:53.057473 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.not_null_players_profiles__streaming_platforms__dlt_id.e37d1f8b99' (models/sources.yml) depends on a node named 'players_profiles__streaming_platforms' in package '' which was not found
+[0m11:42:53.058001 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.chess_data_tst.unique_players_profiles__streaming_platforms__dlt_id.9e741b6974' (models/sources.yml) depends on a node named 'players_profiles__streaming_platforms' in package '' which was not found
+[0m11:42:53.240758 [info ] [MainThread]: Found 10 models, 5 sources, 479 macros
+[0m11:42:53.242732 [info ] [MainThread]: 
+[0m11:42:53.243230 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:42:53.243888 [debug] [MainThread]: Command end result
+[0m11:42:53.271575 [info ] [MainThread]: 
+[0m11:42:53.272135 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:42:53.272584 [info ] [MainThread]: 
+[0m11:42:53.273085 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=0 SKIP=0 TOTAL=0
+[0m11:42:53.274096 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.5576782, "process_user_time": 4.374912, "process_kernel_time": 0.312207, "process_mem_max_rss": "248896", "process_in_blocks": "88", "process_out_blocks": "3256"}
+[0m11:42:53.274764 [debug] [MainThread]: Command `cli seed` succeeded at 11:42:53.274656 after 2.56 seconds
+[0m11:42:53.275264 [debug] [MainThread]: Flushing usage events
+
+
+============================== 11:42:55.816381 | d053e77e-bc17-4c39-9034-6224878dce84 ==============================
+[0m11:42:55.816381 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:42:55.818740 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.python/current/lib/python3.12/site-packages/dlt/helpers/dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/workspaces/dlt-chess-schema-mapping/dbt_chess_data_tst/logs', 'fail_fast': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'True', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m11:42:55.819295 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m11:42:56.455839 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m11:42:56.469133 [debug] [MainThread]: checksum: a5465e2c5ca9ab14d85df5e06a23f5b8cfda31379f9a0d07ef6c4ab05bc6ee83, vars: {'destination_dataset_name': 'chess_data_tst_transformed',
+ 'source_dataset_name': 'chess_data_tst'}, profile: bigquery, target: , version: 1.8.7
+[0m11:42:56.597451 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:42:56.598021 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:42:56.767500 [info ] [MainThread]: Found 10 models, 5 sources, 479 macros
+[0m11:42:56.770811 [info ] [MainThread]: 
+[0m11:42:56.771806 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m11:42:56.778791 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dlthub-sandbox'
+[0m11:42:56.779630 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:42:57.890309 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dlthub-sandbox, now list_dlthub-sandbox_chess_data_tst_transformed)
+[0m11:42:57.891032 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:42:58.532901 [info ] [MainThread]: Concurrency: 4 threads (target='analytics')
+[0m11:42:58.533480 [info ] [MainThread]: 
+[0m11:42:58.535482 [debug] [Thread-1 (]: Began running node model.chess_data_tst.dlt_active_load_ids
+[0m11:42:58.536164 [info ] [Thread-1 (]: 1 of 10 START sql table model chess_data_tst_transformed.dlt_active_load_ids ... [RUN]
+[0m11:42:58.536754 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dlthub-sandbox_chess_data_tst_transformed, now model.chess_data_tst.dlt_active_load_ids)
+[0m11:42:58.537304 [debug] [Thread-1 (]: Began compiling node model.chess_data_tst.dlt_active_load_ids
+[0m11:42:58.550080 [debug] [Thread-1 (]: Writing injected SQL for node "model.chess_data_tst.dlt_active_load_ids"
+[0m11:42:58.551025 [debug] [Thread-1 (]: Began executing node model.chess_data_tst.dlt_active_load_ids
+[0m11:42:58.565772 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:42:59.221055 [debug] [Thread-1 (]: Writing runtime sql for node "model.chess_data_tst.dlt_active_load_ids"
+[0m11:42:59.222636 [debug] [Thread-1 (]: On model.chess_data_tst.dlt_active_load_ids: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.dlt_active_load_ids"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* check if the destination already has a list of processed ids
+if not we will process all loads with status 0 (==success) */
+
+
+SELECT load_id FROM `dlthub-sandbox`.`chess_data_tst`.`_dlt_loads`
+WHERE status = 0
+/* exclude already processed load_ids */
+
+AND load_id NOT IN (SELECT load_id FROM `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_processed_load_ids`)
+
+    );
+  
+[0m11:42:59.813035 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:f8c2675c-b678-4c3b-9793-2db6d3014f64&page=queryresults
+[0m11:43:02.361564 [info ] [Thread-1 (]: 1 of 10 OK created sql table model chess_data_tst_transformed.dlt_active_load_ids  [[32mCREATE TABLE (1.0 rows, 123.0 Bytes processed)[0m in 3.82s]
+[0m11:43:02.362570 [debug] [Thread-1 (]: Finished running node model.chess_data_tst.dlt_active_load_ids
+[0m11:43:02.363717 [debug] [Thread-3 (]: Began running node model.chess_data_tst.stg__dlt_loads
+[0m11:43:02.364261 [debug] [Thread-4 (]: Began running node model.chess_data_tst.stg_players_games
+[0m11:43:02.364873 [debug] [Thread-2 (]: Began running node model.chess_data_tst.stg_players_profiles
+[0m11:43:02.365462 [info ] [Thread-3 (]: 2 of 10 START sql table model chess_data_tst_transformed.stg__dlt_loads ........ [RUN]
+[0m11:43:02.366178 [info ] [Thread-4 (]: 3 of 10 START sql table model chess_data_tst_transformed.stg_players_games ..... [RUN]
+[0m11:43:02.366826 [info ] [Thread-2 (]: 4 of 10 START sql table model chess_data_tst_transformed.stg_players_profiles .. [RUN]
+[0m11:43:02.367509 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.chess_data_tst.stg__dlt_loads'
+[0m11:43:02.368165 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.chess_data_tst.stg_players_games'
+[0m11:43:02.368816 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.chess_data_tst.stg_players_profiles'
+[0m11:43:02.369389 [debug] [Thread-3 (]: Began compiling node model.chess_data_tst.stg__dlt_loads
+[0m11:43:02.369992 [debug] [Thread-4 (]: Began compiling node model.chess_data_tst.stg_players_games
+[0m11:43:02.370559 [debug] [Thread-2 (]: Began compiling node model.chess_data_tst.stg_players_profiles
+[0m11:43:02.373923 [debug] [Thread-3 (]: Writing injected SQL for node "model.chess_data_tst.stg__dlt_loads"
+[0m11:43:02.377300 [debug] [Thread-4 (]: Writing injected SQL for node "model.chess_data_tst.stg_players_games"
+[0m11:43:02.380788 [debug] [Thread-2 (]: Writing injected SQL for node "model.chess_data_tst.stg_players_profiles"
+[0m11:43:02.381758 [debug] [Thread-4 (]: Began executing node model.chess_data_tst.stg_players_games
+[0m11:43:02.382403 [debug] [Thread-3 (]: Began executing node model.chess_data_tst.stg__dlt_loads
+[0m11:43:02.383106 [debug] [Thread-2 (]: Began executing node model.chess_data_tst.stg_players_profiles
+[0m11:43:02.385123 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:43:02.388137 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:43:02.390221 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:43:03.064791 [debug] [Thread-2 (]: Writing runtime sql for node "model.chess_data_tst.stg_players_profiles"
+[0m11:43:03.065912 [debug] [Thread-2 (]: On model.chess_data_tst.stg_players_profiles: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.stg_players_profiles"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* Table: players_profiles */
+
+
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+
+SELECT
+/* select which columns will be available for table 'players_profiles' */
+    last_online,
+    joined,
+    avatar,
+    player_id,
+    aid,
+    url,
+    name,
+    username,
+    title,
+    followers,
+    country,
+    location,
+    status,
+    is_streamer,
+    verified,
+    league,
+    _dlt_load_id,
+    _dlt_id,
+    twitch_url,
+FROM `dlthub-sandbox`.`chess_data_tst`.`players_profiles`
+
+/* we only load table items of the currently active load ids into the staging table */
+WHERE _dlt_load_id IN ( SELECT load_id FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids` )
+    );
+  
+[0m11:43:03.083947 [debug] [Thread-3 (]: Writing runtime sql for node "model.chess_data_tst.stg__dlt_loads"
+[0m11:43:03.084684 [debug] [Thread-3 (]: On model.chess_data_tst.stg__dlt_loads: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.stg__dlt_loads"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`stg__dlt_loads`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* Table: _dlt_loads */
+/* Description: Created by DLT. Tracks completed loads */
+
+
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+
+SELECT
+/* select which columns will be available for table '_dlt_loads' */
+    load_id,
+    schema_name,
+    status,
+    inserted_at,
+    schema_version_hash,
+FROM `dlthub-sandbox`.`chess_data_tst`.`_dlt_loads`
+    );
+  
+[0m11:43:03.110052 [debug] [Thread-4 (]: Writing runtime sql for node "model.chess_data_tst.stg_players_games"
+[0m11:43:03.111210 [debug] [Thread-4 (]: On model.chess_data_tst.stg_players_games: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.stg_players_games"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_games`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* Table: players_games */
+
+
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+
+SELECT
+/* select which columns will be available for table 'players_games' */
+    end_time,
+    url,
+    pgn,
+    time_control,
+    rated,
+    tcn,
+    uuid,
+    initial_setup,
+    fen,
+    time_class,
+    rules,
+    white__rating,
+    white__result,
+    white__aid,
+    white__username,
+    white__uuid,
+    black__rating,
+    black__result,
+    black__aid,
+    black__username,
+    black__uuid,
+    eco,
+    _dlt_load_id,
+    _dlt_id,
+    accuracies__white,
+    accuracies__black,
+    start_time,
+    tournament,
+    match,
+FROM `dlthub-sandbox`.`chess_data_tst`.`players_games`
+
+/* we only load table items of the currently active load ids into the staging table */
+WHERE _dlt_load_id IN ( SELECT load_id FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids` )
+    );
+  
+[0m11:43:03.677008 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:874196d7-c463-4bd7-98b1-70cd866d6247&page=queryresults
+[0m11:43:03.687850 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:cfdf9e59-2f74-4527-9098-a246cdeda86a&page=queryresults
+[0m11:43:03.742348 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:21c2a025-997e-49c0-bac3-e07e83fc4e97&page=queryresults
+[0m11:43:05.957700 [info ] [Thread-3 (]: 2 of 10 OK created sql table model chess_data_tst_transformed.stg__dlt_loads ... [[32mCREATE TABLE (3.0 rows, 266.0 Bytes processed)[0m in 3.59s]
+[0m11:43:05.958598 [debug] [Thread-3 (]: Finished running node model.chess_data_tst.stg__dlt_loads
+[0m11:43:05.959429 [debug] [Thread-1 (]: Began running node model.chess_data_tst.dim__dlt_loads
+[0m11:43:05.960113 [info ] [Thread-1 (]: 5 of 10 START sql incremental model chess_data_tst_transformed.dim__dlt_loads .. [RUN]
+[0m11:43:05.960695 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.dlt_active_load_ids, now model.chess_data_tst.dim__dlt_loads)
+[0m11:43:05.961240 [debug] [Thread-1 (]: Began compiling node model.chess_data_tst.dim__dlt_loads
+[0m11:43:05.964404 [debug] [Thread-1 (]: Writing injected SQL for node "model.chess_data_tst.dim__dlt_loads"
+[0m11:43:05.965190 [debug] [Thread-1 (]: Began executing node model.chess_data_tst.dim__dlt_loads
+[0m11:43:05.996169 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:43:06.426556 [info ] [Thread-2 (]: 4 of 10 OK created sql table model chess_data_tst_transformed.stg_players_profiles  [[32mCREATE TABLE (113.0 rows, 36.2 KiB processed)[0m in 4.06s]
+[0m11:43:06.427389 [debug] [Thread-2 (]: Finished running node model.chess_data_tst.stg_players_profiles
+[0m11:43:06.428236 [debug] [Thread-3 (]: Began running node model.chess_data_tst.dim_players_profiles
+[0m11:43:06.428842 [debug] [Thread-2 (]: Began running node model.chess_data_tst.stg_players_profiles__streaming_platforms
+[0m11:43:06.429455 [info ] [Thread-3 (]: 6 of 10 START sql incremental model chess_data_tst_transformed.dim_players_profiles  [RUN]
+[0m11:43:06.430147 [info ] [Thread-2 (]: 7 of 10 START sql table model chess_data_tst_transformed.stg_players_profiles__streaming_platforms  [RUN]
+[0m11:43:06.430754 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.stg__dlt_loads, now model.chess_data_tst.dim_players_profiles)
+[0m11:43:06.431349 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.stg_players_profiles, now model.chess_data_tst.stg_players_profiles__streaming_platforms)
+[0m11:43:06.431934 [debug] [Thread-3 (]: Began compiling node model.chess_data_tst.dim_players_profiles
+[0m11:43:06.432515 [debug] [Thread-2 (]: Began compiling node model.chess_data_tst.stg_players_profiles__streaming_platforms
+[0m11:43:06.435712 [debug] [Thread-3 (]: Writing injected SQL for node "model.chess_data_tst.dim_players_profiles"
+[0m11:43:06.439365 [debug] [Thread-2 (]: Writing injected SQL for node "model.chess_data_tst.stg_players_profiles__streaming_platforms"
+[0m11:43:06.440257 [debug] [Thread-3 (]: Began executing node model.chess_data_tst.dim_players_profiles
+[0m11:43:06.442997 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:43:06.443513 [debug] [Thread-2 (]: Began executing node model.chess_data_tst.stg_players_profiles__streaming_platforms
+[0m11:43:06.471208 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:43:06.672150 [debug] [Thread-1 (]: Writing runtime sql for node "model.chess_data_tst.dim__dlt_loads"
+[0m11:43:06.673070 [debug] [Thread-1 (]: On model.chess_data_tst.dim__dlt_loads: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.dim__dlt_loads"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `dlthub-sandbox`.`chess_data_tst_transformed`.`dim__dlt_loads` as DBT_INTERNAL_DEST
+        using (/* Table: _dlt_loads */
+
+/* Description: Created by DLT. Tracks completed loads */
+SELECT
+    t.load_id,
+    t.schema_name,
+    t.status,
+    t.inserted_at,
+    t.schema_version_hash,
+FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`stg__dlt_loads` as t
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`load_id`, `schema_name`, `status`, `inserted_at`, `schema_version_hash`)
+    values
+        (`load_id`, `schema_name`, `status`, `inserted_at`, `schema_version_hash`)
+
+
+    
+[0m11:43:07.134862 [debug] [Thread-3 (]: Writing runtime sql for node "model.chess_data_tst.dim_players_profiles"
+[0m11:43:07.135743 [debug] [Thread-3 (]: On model.chess_data_tst.dim_players_profiles: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.dim_players_profiles"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `dlthub-sandbox`.`chess_data_tst_transformed`.`dim_players_profiles` as DBT_INTERNAL_DEST
+        using (/* Table: players_profiles */
+
+SELECT
+    t.last_online,
+    t.joined,
+    t.avatar,
+    t.player_id,
+    t.aid,
+    t.url,
+    t.name,
+    t.username,
+    t.title,
+    t.followers,
+    t.country,
+    t.location,
+    t.status,
+    t.is_streamer,
+    t.verified,
+    t.league,
+    t._dlt_load_id,
+    t._dlt_id,
+    t.twitch_url,
+FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles` as t
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`last_online`, `joined`, `avatar`, `player_id`, `aid`, `url`, `name`, `username`, `title`, `followers`, `country`, `location`, `status`, `is_streamer`, `verified`, `league`, `_dlt_load_id`, `_dlt_id`, `twitch_url`)
+    values
+        (`last_online`, `joined`, `avatar`, `player_id`, `aid`, `url`, `name`, `username`, `title`, `followers`, `country`, `location`, `status`, `is_streamer`, `verified`, `league`, `_dlt_load_id`, `_dlt_id`, `twitch_url`)
+
+
+    
+[0m11:43:07.145347 [debug] [Thread-2 (]: Writing runtime sql for node "model.chess_data_tst.stg_players_profiles__streaming_platforms"
+[0m11:43:07.146150 [debug] [Thread-2 (]: On model.chess_data_tst.stg_players_profiles__streaming_platforms: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.stg_players_profiles__streaming_platforms"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles__streaming_platforms`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* Table: players_profiles__streaming_platforms */
+/* Parent: { parent }} */
+
+
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles`
+
+SELECT
+/* select which columns will be available for table 'players_profiles__streaming_platforms' */
+    type,
+    channel_url,
+    _dlt_parent_id,
+    _dlt_list_idx,
+    _dlt_id,
+FROM `dlthub-sandbox`.`chess_data_tst`.`players_profiles__streaming_platforms`
+
+/* we only load table items if the parent table has the parent item */
+WHERE _dlt_parent_id IN ( SELECT _dlt_id FROM `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles` )
+    );
+  
+[0m11:43:07.336523 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:aa49b313-ad81-487c-a465-fcc3913eabe5&page=queryresults
+[0m11:43:07.779579 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:7d28157f-568c-465a-a263-dbed0e8c942a&page=queryresults
+[0m11:43:07.786588 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:31431c33-a29c-40dc-96ff-9671b0eb2ceb&page=queryresults
+[0m11:43:09.223279 [info ] [Thread-1 (]: 5 of 10 OK created sql incremental model chess_data_tst_transformed.dim__dlt_loads  [[32mMERGE (3.0 rows, 266.0 Bytes processed)[0m in 3.26s]
+[0m11:43:09.224189 [debug] [Thread-1 (]: Finished running node model.chess_data_tst.dim__dlt_loads
+[0m11:43:09.637090 [info ] [Thread-3 (]: 6 of 10 OK created sql incremental model chess_data_tst_transformed.dim_players_profiles  [[32mMERGE (113.0 rows, 36.2 KiB processed)[0m in 3.21s]
+[0m11:43:09.637914 [debug] [Thread-3 (]: Finished running node model.chess_data_tst.dim_players_profiles
+[0m11:43:10.065482 [info ] [Thread-2 (]: 7 of 10 OK created sql table model chess_data_tst_transformed.stg_players_profiles__streaming_platforms  [[32mCREATE TABLE (14.0 rows, 2.8 KiB processed)[0m in 3.63s]
+[0m11:43:10.066735 [debug] [Thread-2 (]: Finished running node model.chess_data_tst.stg_players_profiles__streaming_platforms
+[0m11:43:10.067940 [debug] [Thread-1 (]: Began running node model.chess_data_tst.dim_players_profiles__streaming_platforms
+[0m11:43:10.068966 [info ] [Thread-1 (]: 8 of 10 START sql incremental model chess_data_tst_transformed.dim_players_profiles__streaming_platforms  [RUN]
+[0m11:43:10.069910 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.dim__dlt_loads, now model.chess_data_tst.dim_players_profiles__streaming_platforms)
+[0m11:43:10.070806 [debug] [Thread-1 (]: Began compiling node model.chess_data_tst.dim_players_profiles__streaming_platforms
+[0m11:43:10.076408 [debug] [Thread-1 (]: Writing injected SQL for node "model.chess_data_tst.dim_players_profiles__streaming_platforms"
+[0m11:43:10.077960 [debug] [Thread-1 (]: Began executing node model.chess_data_tst.dim_players_profiles__streaming_platforms
+[0m11:43:10.082403 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:43:11.033359 [debug] [Thread-1 (]: Writing runtime sql for node "model.chess_data_tst.dim_players_profiles__streaming_platforms"
+[0m11:43:11.034377 [debug] [Thread-1 (]: On model.chess_data_tst.dim_players_profiles__streaming_platforms: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.dim_players_profiles__streaming_platforms"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `dlthub-sandbox`.`chess_data_tst_transformed`.`dim_players_profiles__streaming_platforms` as DBT_INTERNAL_DEST
+        using (/* Table: players_profiles__streaming_platforms */
+/* Parent: players_profiles */
+
+SELECT
+    t.type,
+    t.channel_url,
+    t._dlt_parent_id,
+    t._dlt_list_idx,
+    t._dlt_id,
+FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles__streaming_platforms` as t
+/* this join to the parent table is not necessarily needed for this template to work */
+JOIN `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_profiles` as pt
+ON (t._dlt_parent_id = pt._dlt_id)
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`type`, `channel_url`, `_dlt_parent_id`, `_dlt_list_idx`, `_dlt_id`)
+    values
+        (`type`, `channel_url`, `_dlt_parent_id`, `_dlt_list_idx`, `_dlt_id`)
+
+
+    
+[0m11:43:11.693124 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:578c9fdf-b3f0-4d7c-896c-c94fa092f34a&page=queryresults
+[0m11:43:12.825159 [info ] [Thread-4 (]: 3 of 10 OK created sql table model chess_data_tst_transformed.stg_players_games  [[32mCREATE TABLE (67.6k rows, 474.4 MiB processed)[0m in 10.46s]
+[0m11:43:12.826049 [debug] [Thread-4 (]: Finished running node model.chess_data_tst.stg_players_games
+[0m11:43:12.826842 [debug] [Thread-2 (]: Began running node model.chess_data_tst.fact_players_games
+[0m11:43:12.827518 [info ] [Thread-2 (]: 9 of 10 START sql incremental model chess_data_tst_transformed.fact_players_games  [RUN]
+[0m11:43:12.828093 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.stg_players_profiles__streaming_platforms, now model.chess_data_tst.fact_players_games)
+[0m11:43:12.828643 [debug] [Thread-2 (]: Began compiling node model.chess_data_tst.fact_players_games
+[0m11:43:12.831906 [debug] [Thread-2 (]: Writing injected SQL for node "model.chess_data_tst.fact_players_games"
+[0m11:43:12.832614 [debug] [Thread-2 (]: Began executing node model.chess_data_tst.fact_players_games
+[0m11:43:12.841780 [debug] [Thread-2 (]: Writing runtime sql for node "model.chess_data_tst.fact_players_games"
+[0m11:43:12.842492 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:43:12.843955 [debug] [Thread-2 (]: On model.chess_data_tst.fact_players_games: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.fact_players_games"} */
+
+  
+    
+
+    create or replace table `dlthub-sandbox`.`chess_data_tst_transformed`.`fact_players_games`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /* Fact Table: players_games */
+
+
+SELECT
+    ---- main table players_games
+    players_games._dlt_id,
+    players_games.end_time,
+    players_games.url,
+    players_games.pgn,
+    players_games.time_control,
+    players_games.rated,
+    players_games.tcn,
+    players_games.uuid,
+    players_games.initial_setup,
+    players_games.fen,
+    players_games.time_class,
+    players_games.rules,
+    players_games.white__rating,
+    players_games.white__result,
+    players_games.white__aid,
+    players_games.white__username,
+    players_games.white__uuid,
+    players_games.black__rating,
+    players_games.black__result,
+    players_games.black__aid,
+    players_games.black__username,
+    players_games.black__uuid,
+    players_games.eco,
+    players_games.accuracies__white,
+    players_games.accuracies__black,
+    players_games.start_time,
+    players_games.tournament,
+    players_games.match,
+
+    
+
+FROM  `dlthub-sandbox`.`chess_data_tst_transformed`.`stg_players_games` as players_games
+    );
+  
+[0m11:43:13.517350 [info ] [Thread-1 (]: 8 of 10 OK created sql incremental model chess_data_tst_transformed.dim_players_profiles__streaming_platforms  [[32mMERGE (14.0 rows, 2.8 KiB processed)[0m in 3.45s]
+[0m11:43:13.518323 [debug] [Thread-1 (]: Finished running node model.chess_data_tst.dim_players_profiles__streaming_platforms
+[0m11:43:13.693404 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:307b8903-e2b1-4e69-98ae-4d3df3e3ceda&page=queryresults
+[0m11:43:23.654926 [info ] [Thread-2 (]: 9 of 10 OK created sql incremental model chess_data_tst_transformed.fact_players_games  [[32mCREATE TABLE (67.6k rows, 236.0 MiB processed)[0m in 10.83s]
+[0m11:43:23.655812 [debug] [Thread-2 (]: Finished running node model.chess_data_tst.fact_players_games
+[0m11:43:23.656797 [debug] [Thread-4 (]: Began running node model.chess_data_tst.dlt_processed_load_ids
+[0m11:43:23.657466 [info ] [Thread-4 (]: 10 of 10 START sql incremental model chess_data_tst_transformed.dlt_processed_load_ids  [RUN]
+[0m11:43:23.658085 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.chess_data_tst.stg_players_games, now model.chess_data_tst.dlt_processed_load_ids)
+[0m11:43:23.658626 [debug] [Thread-4 (]: Began compiling node model.chess_data_tst.dlt_processed_load_ids
+[0m11:43:23.664693 [debug] [Thread-4 (]: Writing injected SQL for node "model.chess_data_tst.dlt_processed_load_ids"
+[0m11:43:23.665424 [debug] [Thread-4 (]: Began executing node model.chess_data_tst.dlt_processed_load_ids
+[0m11:43:23.668211 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:43:24.313021 [debug] [Thread-4 (]: Writing runtime sql for node "model.chess_data_tst.dlt_processed_load_ids"
+[0m11:43:24.314007 [debug] [Thread-4 (]: On model.chess_data_tst.dlt_processed_load_ids: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "bigquery", "target_name": "analytics", "node_id": "model.chess_data_tst.dlt_processed_load_ids"} */
+-- back compat for old kwarg name
+  
+  
+        
+    
+
+    
+
+    merge into `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_processed_load_ids` as DBT_INTERNAL_DEST
+        using (
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dim__dlt_loads`
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dim_players_profiles`
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`fact_players_games`
+-- depends_on: `dlthub-sandbox`.`chess_data_tst_transformed`.`dim_players_profiles__streaming_platforms`
+/* we save all currently active load ids into the processed ids table */
+select load_id, current_timestamp() as inserted_at FROM `dlthub-sandbox`.`chess_data_tst_transformed`.`dlt_active_load_ids`
+        ) as DBT_INTERNAL_SOURCE
+        on (FALSE)
+
+    
+
+    when not matched then insert
+        (`load_id`, `inserted_at`)
+    values
+        (`load_id`, `inserted_at`)
+
+
+    
+[0m11:43:24.988485 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dlthub-sandbox&j=bq:US:76f818b0-c23e-4159-b2e4-675fe61f4e01&page=queryresults
+[0m11:43:26.815864 [info ] [Thread-4 (]: 10 of 10 OK created sql incremental model chess_data_tst_transformed.dlt_processed_load_ids  [[32mMERGE (1.0 rows, 19.0 Bytes processed)[0m in 3.16s]
+[0m11:43:26.816760 [debug] [Thread-4 (]: Finished running node model.chess_data_tst.dlt_processed_load_ids
+[0m11:43:26.818402 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:43:26.818876 [debug] [MainThread]: Connection 'model.chess_data_tst.dim_players_profiles__streaming_platforms' was properly closed.
+[0m11:43:26.819337 [debug] [MainThread]: Connection 'model.chess_data_tst.dim_players_profiles' was properly closed.
+[0m11:43:26.819782 [debug] [MainThread]: Connection 'model.chess_data_tst.dlt_processed_load_ids' was properly closed.
+[0m11:43:26.820223 [debug] [MainThread]: Connection 'model.chess_data_tst.fact_players_games' was properly closed.
+[0m11:43:26.820789 [info ] [MainThread]: 
+[0m11:43:26.821261 [info ] [MainThread]: Finished running 5 table models, 5 incremental models in 0 hours 0 minutes and 30.05 seconds (30.05s).
+[0m11:43:26.823374 [debug] [MainThread]: Command end result
+[0m11:43:26.858032 [info ] [MainThread]: 
+[0m11:43:26.858589 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:43:26.859056 [info ] [MainThread]: 
+[0m11:43:26.859553 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 TOTAL=10
+[0m11:43:26.860576 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 31.108318, "process_user_time": 3.61792, "process_kernel_time": 0.370404, "process_mem_max_rss": "247024", "process_out_blocks": "2472", "process_in_blocks": "0"}
+[0m11:43:26.861243 [debug] [MainThread]: Command `cli run` succeeded at 11:43:26.861134 after 31.11 seconds
+[0m11:43:26.861771 [debug] [MainThread]: Flushing usage events
+
+
+============================== 11:43:29.404360 | 4473ac4a-60c9-4c16-972b-17c544ce6607 ==============================
+[0m11:43:29.404360 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:43:29.406727 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/codespace/.python/current/lib/python3.12/site-packages/dlt/helpers/dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/workspaces/dlt-chess-schema-mapping/dbt_chess_data_tst/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m11:43:29.407272 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m11:43:30.005988 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m11:43:30.019091 [debug] [MainThread]: checksum: a5465e2c5ca9ab14d85df5e06a23f5b8cfda31379f9a0d07ef6c4ab05bc6ee83, vars: {'destination_dataset_name': 'chess_data_tst_transformed',
+ 'source_dataset_name': 'chess_data_tst'}, profile: bigquery, target: , version: 1.8.7
+[0m11:43:30.149449 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:43:30.150177 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:43:30.313254 [info ] [MainThread]: Found 10 models, 5 sources, 479 macros
+[0m11:43:30.315263 [info ] [MainThread]: 
+[0m11:43:30.315752 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:43:30.317694 [debug] [MainThread]: Command end result
+[0m11:43:30.349122 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.0097295, "process_user_time": 2.94329, "process_kernel_time": 0.279552, "process_mem_max_rss": "245372", "process_out_blocks": "2208", "process_in_blocks": "0"}
+[0m11:43:30.349862 [debug] [MainThread]: Command `cli test` succeeded at 11:43:30.349747 after 1.01 seconds
+[0m11:43:30.350379 [debug] [MainThread]: Flushing usage events

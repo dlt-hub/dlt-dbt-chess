@@ -1,0 +1,113 @@
+version: 2
+sources:
+  - name: raw_data
+    schema: '{{ var ("source_dataset_name") }}'
+    tables:
+      - name: _dlt_loads
+      - name: players_profiles
+      - name: players_games
+      - name: players_profiles__streaming_platforms
+  - name: transformed_data
+    schema: '{{ var ("destination_dataset_name") }}'
+    tables:
+      - name: dlt_processed_load_ids
+
+models:
+      - name: dlt_processed_load_ids
+        description: "This table contains all processed load ids for incremental loading"
+      - name: _dlt_loads
+        description: "Created by DLT. Tracks completed loads"
+        columns:
+          - name: load_id
+            tests:
+              - not_null
+          - name: schema_name
+          - name: status
+            tests:
+              - not_null
+          - name: inserted_at
+            tests:
+              - not_null
+          - name: schema_version_hash
+      - name: players_profiles
+        columns:
+          - name: last_online
+            tests:
+              - not_null
+          - name: joined
+            tests:
+              - not_null
+          - name: avatar
+          - name: player_id
+          - name: aid
+          - name: url
+          - name: name
+          - name: username
+          - name: title
+          - name: followers
+          - name: country
+          - name: location
+          - name: status
+          - name: is_streamer
+          - name: verified
+          - name: league
+          - name: _dlt_load_id
+            tests:
+              - not_null
+          - name: _dlt_id
+            tests:
+              - not_null
+              - unique
+          - name: twitch_url
+      - name: players_games
+        columns:
+          - name: end_time
+            tests:
+              - not_null
+          - name: url
+          - name: pgn
+          - name: time_control
+          - name: rated
+          - name: tcn
+          - name: uuid
+          - name: initial_setup
+          - name: fen
+          - name: time_class
+          - name: rules
+          - name: white__rating
+          - name: white__result
+          - name: white__aid
+          - name: white__username
+          - name: white__uuid
+          - name: black__rating
+          - name: black__result
+          - name: black__aid
+          - name: black__username
+          - name: black__uuid
+          - name: eco
+          - name: _dlt_load_id
+            tests:
+              - not_null
+          - name: _dlt_id
+            tests:
+              - not_null
+              - unique
+          - name: accuracies__white
+          - name: accuracies__black
+          - name: start_time
+          - name: tournament
+          - name: match
+      - name: players_profiles__streaming_platforms
+        columns:
+          - name: type
+          - name: channel_url
+          - name: _dlt_parent_id
+            tests:
+              - not_null
+          - name: _dlt_list_idx
+            tests:
+              - not_null
+          - name: _dlt_id
+            tests:
+              - not_null
+              - unique
