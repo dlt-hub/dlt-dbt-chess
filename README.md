@@ -44,21 +44,18 @@ dbt_chess_pipeline/
 ├── macros/
 ├── models/
 │   ├── marts/
-│   │   ├── dim_chess_pipeline__dlt_loads.sql
-│   │   ├── dim_chess_pipeline__players_games.sql
-│   │   ├── dim_chess_pipeline__players_online_status.sql
-│   │   ├── dim_chess_pipeline__players_profiles__streaming.sql
-│   │   ├── dim_chess_pipeline__players_profiles.sql
+│   │   ├── dim__dlt_loads.sql
+│   │   ├── fact_players_games.sql
+│   │   ├── dim_players_profiles__streaming_platforms.sql
+│   │   ├── dim_players_profiles.sql
 │   └── staging/
-│       ├── stg_chess_pipeline__dlt_loads.sql
-│       ├── stg_chess_pipeline__players_games.sql
-│       ├── stg_chess_pipeline__players_online_status.sql
-│       ├── stg_chess_pipeline__players_profiles__streaming.sql
-│       ├── stg_chess_pipeline__players_profiles.sql
-│       ├── dlt_active_load_ids.sql
-│       ├── dlt_processed_load_ids.sql
+│   │   ├── stg__dlt_loads.sql
+│   │   ├── stg_players_games.sql
+│   │   ├── stg_players_profiles__streaming_platforms.sql
+│   │   ├── stg_players_profiles.sql
+│   ├── dlt_active_load_ids.sql
+│   └── dlt_processed_load_ids.sql
 ├── tests/
-├── sources.yml
 ├── dbt_project.yml
 └── requirements.txt
 ```
@@ -73,12 +70,6 @@ dbt run
 >You can use the 'run_chess_dbt.py' script to execute your dbt transformations and load the results into a 
 >new dataset named `<original-dataset>_transformed` and run the dbt tests. To use, please ensure you configure 
 >your dlt pipeline name and destination correctly.
-
-To check for issues, run the dbt tests:
-
-```sh
-dbt test
-```
 
 ### Schema diagram
 The dbt model above can be further customized according to the requirements. Using this package you'll get a basic template
