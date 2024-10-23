@@ -64,12 +64,8 @@ dbt_chess_pipeline/
 Execute the dbt models to transform the raw Chess data into useful tables:
 
 ```sh
-dbt run
+dbt build
 ```
-
->You can use the 'run_chess_dbt.py' script to execute your dbt transformations and load the results into a 
->new dataset named `<original-dataset>_transformed` and run the dbt tests. To use, please ensure you configure 
->your dlt pipeline name and destination correctly.
 
 ### Schema diagram
 The dbt model above can be further customized according to the requirements. Using this package you'll get a basic template
@@ -79,8 +75,10 @@ for data model which can be further modified as required.
     
    ![picture1](https://storage.googleapis.com/dlt-blog-images/Chess-dlt-dbt-package.png)
 
-> Please note that this is a starting template for your data model and is not the final product. It is advised to customize the
-> data model as per your needs.
+> ⚠️ **Note:**
+> 
+> Please note that this is a starting template for your data model and is not the final product. It is advised to customize
+> the data model as per your needs.
 
 Here's the link to the DB diagram: [link](https://dbdiagram.io/d/Chess-dlt-dbt-package-66ff678dfb079c7ebd4c4471).
 
