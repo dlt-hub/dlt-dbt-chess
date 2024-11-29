@@ -23,5 +23,4 @@ SELECT
     t.league,
     t._dlt_load_id,
     t._dlt_id,
-    t.twitch_url,
 FROM  {{ ref('stg_players_profiles') }} as t

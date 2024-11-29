@@ -27,7 +27,6 @@ SELECT
     league,
     _dlt_load_id,
     _dlt_id,
-    twitch_url,
 FROM {{ source('raw_data', 'players_profiles') }}
 
 /* we only load table items of the currently active load ids into the staging table */

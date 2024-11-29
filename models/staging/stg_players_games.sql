@@ -35,9 +35,6 @@ SELECT
     _dlt_id,
     accuracies__white,
     accuracies__black,
-    start_time,
-    tournament,
-    match,
 FROM {{ source('raw_data', 'players_games') }}
 
 /* we only load table items of the currently active load ids into the staging table */

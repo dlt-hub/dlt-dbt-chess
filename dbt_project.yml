@@ -1,9 +1,9 @@
-name: 'chess'
+name: 'chess_pipeline'
 
 config-version: 2
 version: '0.1'
 
-profile: 'chess'
+profile: 'chess_pipeline'
 
 model-paths: ["models"]
 test-paths: ["tests"]
@@ -19,7 +19,7 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  chess:
+  chess_pipeline:
     materialized: table
     staging:
       materialized: view

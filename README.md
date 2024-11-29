@@ -73,14 +73,14 @@ for data model which can be further modified as required.
 
 1. The schema of data modelled above using dlt-dbt-generator:
     
-   ![picture1](https://storage.googleapis.com/dlt-blog-images/Chess-dlt-dbt-package.png)
+   ![picture1](https://storage.googleapis.com/dlt-blog-images/chess_dlt_dbt_dim_model.png)
 
 > ⚠️ **Note:**
 > 
 > Please note that this is a starting template for your data model and is not the final product. It is advised to customize
 > the data model as per your needs.
 
-Here's the link to the DB diagram: [link](https://dbdiagram.io/d/Chess-dlt-dbt-package-66ff678dfb079c7ebd4c4471).
+Here's the link to the DB diagram: [link](https://dbdiagram.io/d/chess_dlt_dbt_v1-5-6749b027e9daa85aca230327).
 
 #### Optional: Advanced Usage (Generator and Licensing)
 

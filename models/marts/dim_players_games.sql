@@ -1,0 +1,34 @@
+/* Table: players_games */
+{{
+    config(
+        materialized='incremental'
+    )
+}}
+SELECT
+    t.end_time,
+    t.url,
+    t.pgn,
+    t.time_control,
+    t.rated,
+    t.tcn,
+    t.uuid,
+    t.initial_setup,
+    t.fen,
+    t.time_class,
+    t.rules,
+    t.white__rating,
+    t.white__result,
+    t.white__aid,
+    t.white__username,
+    t.white__uuid,
+    t.black__rating,
+    t.black__result,
+    t.black__aid,
+    t.black__username,
+    t.black__uuid,
+    t.eco,
+    t._dlt_load_id,
+    t._dlt_id,
+    t.accuracies__white,
+    t.accuracies__black,
+FROM  {{ ref('stg_players_games') }} as t

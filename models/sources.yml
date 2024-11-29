@@ -6,7 +6,6 @@ sources:
       - name: _dlt_loads
       - name: players_profiles
       - name: players_games
-      - name: players_profiles__streaming_platforms
   - name: transformed_data
     schema: '{{ var ("destination_dataset_name") }}'
     tables:
@@ -58,7 +57,6 @@ models:
             tests:
               - not_null
               - unique
-          - name: twitch_url
       - name: players_games
         columns:
           - name: end_time
@@ -94,20 +92,3 @@ models:
               - unique
           - name: accuracies__white
           - name: accuracies__black
-          - name: start_time
-          - name: tournament
-          - name: match
-      - name: players_profiles__streaming_platforms
-        columns:
-          - name: type
-          - name: channel_url
-          - name: _dlt_parent_id
-            tests:
-              - not_null
-          - name: _dlt_list_idx
-            tests:
-              - not_null
-          - name: _dlt_id
-            tests:
-              - not_null
-              - unique
